@@ -34,7 +34,7 @@ export async function POST(request) {
       cc: cc || undefined,
       subject,
       text: body, // Plain text body
-      html: body.replace(/\n/g, '<br>'), // HTML body
+      html: `<div style="font-family: serif, 'Times New Roman', Times; font-size: 16px;">${body.replace(/\n/g, '<br>')}</div>`, // HTML body
       attachments: mailAttachments
     };
 
